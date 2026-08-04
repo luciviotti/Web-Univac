@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Univac.ERP</title>
+<meta name="description" content="Univac integra ventas, compras, stock, producción y administración en una sola plataforma. Menos planillas, más control y decisiones con datos en tiempo real.">
+<link rel="icon" type="image/png" href="favicon_univac.png">
+
+<!-- Tipografías: Poppins para titulares (personalidad tech/geométrica), Inter para cuerpo (legibilidad en datos/UI), JetBrains Mono para cifras y etiquetas de datos -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0" rel="stylesheet">
+
+<script>
+  // Aplica la preferencia guardada antes de mostrar la página.
+  if (localStorage.getItem('univac-theme') === 'light') {
+    document.documentElement.dataset.theme = 'light';
+  }
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- FONDO DE PARTÍCULAS (Canvas) -->
+<!-- ============================================ -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- ============================================ -->
+<!-- NAVBAR -->
+<!-- ============================================ -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#inicio" class="navbar__brand">
+      <img src="imagotipo_univac.png" alt="Univac.ERP" class="navbar__logo">
+    </a>
+
+    <nav class="navbar__links" id="navLinks">
+      <a href="#inicio" class="navlink">Inicio</a>
+      <a href="#empresa" class="navlink">Empresa</a>
+      <a href="#soluciones" class="navlink">Soluciones</a>
+
+    </nav>
+
+    <a href="#contacto" class="btn btn--ghost navbar__cta">Solicitar demo</a>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Activar modo claro" aria-pressed="false" title="Cambiar tema">
+      <span class="theme-toggle__icon material-symbols-rounded" aria-hidden="true">light_mode</span>
+    </button>
+
+    <button class="navbar__burger" id="burgerBtn" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Menú mobile -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#inicio" class="navlink">Inicio</a>
+  <a href="#empresa" class="navlink">Empresa</a>
+  <a href="#soluciones" class="navlink">Soluciones</a>
+</div>
+
+<main>
+
+<!-- ============================================ -->
+<!-- 1. HERO -->
+<!-- ============================================ -->
+<section class="hero" id="inicio">
+  <div class="hero__glow hero__glow--1"></div>
+  <div class="hero__glow hero__glow--2"></div>
+
+  <div class="hero__inner">
+    <div class="hero__content">
+      <span class="eyebrow reveal-up">
+        <span class="eyebrow__dot"></span>
+        Actualizado con los últimos requerimientos de ARCA
+      </span>
+
+      <h1 class="hero__title reveal-up" data-delay="1">
+        El ERP que ordena tu empresa
+        <span class="text-gradient">y la hace crecer</span>
+      </h1>
+
+      <p class="hero__subtitle reveal-up" data-delay="2">
+        Univac integra ventas, compras, stock, producción y administración
+        en una sola plataforma. Menos planillas, más control y decisiones
+        con datos en tiempo real.
+      </p>
+
+      <div class="hero__actions reveal-up" data-delay="3">
+        <a href="#contacto" class="btn btn--primary">
+          <span>Solicitar una demo</span>
+        </a>
+        <a href="#soluciones" class="btn btn--outline">
+          <span>Ver módulos</span>
+        </a>
+      </div>
+
+      <div class="hero__trust reveal-up" data-delay="4">
+        <p class="hero__trust-label">Por qué elegir Univac</p>
+          <div class="hero__trust-logos">
+            <span>✓ Implementación acompañada</span>
+            <span>✓ Soporte local</span>
+            <span>✓ Listo para escalar</span>
+          </div>
+      </div>
+    </div>
+
+    <div class="hero__visual reveal-up" data-delay="2">
+  <div class="orbit-card">
+    <div class="orbit-card__glass orbit-card__glass--image">
+      <img src="ejemplo-panel-control.png" alt="Panel de Univac.ERP" class="orbit-card__screenshot">
+    </div>
+    <div class="orbit-card__satellite orbit-card__satellite--1">✓</div>
+    <div class="orbit-card__satellite orbit-card__satellite--2">⇄ Univac.ERP</div>
+  </div>
+</div>
+
+  <div class="scroll-indicator">
+    <span></span>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 2. QUÉ ES EL SISTEMA -->
+<!-- ============================================ -->
+<section class="section what-is" id="empresa">
+  <div class="container">
+    <div class="what-is__grid what-is__grid--single">
+      <div class="reveal-up">
+        <span class="section-eyebrow">¿Qué es Univac.ERP?</span>
+        <h2 class="section-title">
+          La evolución del software de gestión empresarial
+        </h2>
+        <p class="section-text">
+          Univac integra ventas, compras, stock, producción y administración
+          en una sola plataforma, con datos y reportes siempre actualizados
+          en tiempo real y soporte y acompañamiento en español. Una
+          plataforma pensada para acompañar el crecimiento real de tu
+          negocio, sin resignar velocidad ni control.
+        </p>
+        <div class="what-is__stats">
+          <div class="stat">
+              <strong class="counter" data-target="30" data-prefix="+">0</strong>
+              <p>Años desarrollando software de gestión</p>
+          </div>
+          <div class="stat">
+              <strong class="counter" data-target="100" data-prefix="%">0</strong>
+              <p>Facturación electrónica integrada con ARCA</p>
+          </div>
+          <div class="stat">
+            <strong class="stat__text">Datos reales</strong>
+            <p>Stock y reportes siempre actualizados</p>
+          </div>
+          <div class="stat">
+            <strong class="stat__text">E-commerce</strong>
+            <p>Nativo e integrado con los demás módulos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 5. FUNCIONALIDADES / MÓDULOS -->
+<!-- ============================================ -->
+<section class="section modules" id="soluciones">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <span class="section-eyebrow">Una plataforma, todos los módulos</span>
+      <h2 class="section-title">Todo lo que tu empresa necesita para operar</h2>
+      <p class="section-text section-text--center">
+        Activá los módulos que usás hoy y sumá más a medida que tu negocio crece. Sin sistemas sueltos ni datos duplicados.
+      </p>
+    </div>
+
+    <div class="modules-grid" id="caracteristicas">
+      <article class="module-card reveal-up" data-delay="1">
+        <div class="module-card__icon"><span class="material-symbols-rounded" aria-hidden="true">receipt_long</span></div>
+        <h3>Compras</h3>
+        <p>Registro de comprobantes, CITI compras, cuenta corriente y gestión de proveedores en un solo lugar.</p>
+      </article>
+
+      <article class="module-card reveal-up" data-delay="2">
+        <div class="module-card__icon"><span class="material-symbols-rounded" aria-hidden="true">payments</span></div>
+        <h3>Ventas</h3>
+        <p>Emisión de comprobantes, factura electrónica, CITI ventas y administración de clientes.</p>
+      </article>
+
+      <article class="module-card reveal-up" data-delay="3">
+        <div class="module-card__icon"><span class="material-symbols-rounded" aria-hidden="true">monitoring</span></div>
+        <h3>Estadísticas</h3>
+        <p>Compras, ventas, consumos, utilidades y rendimiento por sector con reportes claros y exportables.</p>
+      </article>
+
+      <article class="module-card reveal-up" data-delay="4">
+        <div class="module-card__icon"><span class="material-symbols-rounded" aria-hidden="true">factory</span></div>
+        <h3>Producción</h3>
+        <p>Artículos, rubros, fabricación y manejo de sucursales adaptado a tu flujo productivo.</p>
+      </article>
+
+      <article class="module-card reveal-up" data-delay="5">
+        <div class="module-card__icon"><span class="material-symbols-rounded" aria-hidden="true">account_balance</span></div>
+        <h3>Administración</h3>
+        <p>Caja diaria, ingresos y egresos, libros contables, cheques de terceros y conciliación bancaria.</p>
+      </article>
+
+      <article class="module-card reveal-up" data-delay="6">
+        <div class="module-card__icon"><span class="material-symbols-rounded" aria-hidden="true">inventory_2</span></div>
+        <h3>Gestión de Stock</h3>
+        <p>Alta, baja y administración de stock con existencias actualizadas en tiempo real y con integración al e-commerce.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ -->
+<!-- 4. BENEFICIOS -->
+<!-- ============================================ -->
+<section class="section benefits" id="beneficios">
+  <div class="container">
+    <div class="benefits__grid">
+
+      <div class="benefits__visual reveal-up" data-delay="1">
+        <div class="orbit-card__glass orbit-card__glass--image">
+          <img src="ejemplo-panel-control.png" alt="Panel de control de Univac.ERP" class="orbit-card__screenshot">
+        </div>
+      </div>
+
+      <div class="benefits__content">
+        <span class="section-eyebrow reveal-up">Por qué Univac</span>
+        <h2 class="section-title reveal-up" data-delay="1">De las planillas sueltas a un sistema que trabaja para vos</h2>
+        <p class="section-text reveal-up" data-delay="2">
+          Centralizá la información de toda la empresa y dejá que el sistema te muestre lo que importa, en el momento que lo necesitás.
+        </p>
+
+        <div class="benefit-list">
+          <div class="benefit-item reveal-up" data-delay="3">
+            <div class="card__icon card__icon--blue"><span class="material-symbols-rounded" aria-hidden="true">bolt</span></div>
+            <div class="benefit-item__text">
+              <h3>Operá más rápido</h3>
+              <p>Automatizá facturación, stock y caja. Tu equipo deja de cargar datos dos veces y gana horas cada semana.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item reveal-up" data-delay="4">
+            <div class="card__icon card__icon--blue"><span class="material-symbols-rounded" aria-hidden="true">trending_up</span></div>
+            <div class="benefit-item__text">
+              <h3>Decidí con datos</h3>
+              <p>Reportes de ventas, utilidades y consumos en tiempo real para saber siempre cómo va el negocio.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item reveal-up" data-delay="5">
+            <div class="card__icon card__icon--blue"><span class="material-symbols-rounded" aria-hidden="true">task</span></div>
+            <div class="benefit-item__text">
+              <h3>Cumplí con ARCA</h3>
+              <p>Factura electrónica, CITI compras y ventas y libros contables al día, sin sorpresas impositivas.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item reveal-up" data-delay="6">
+            <div class="card__icon card__icon--blue"><span class="material-symbols-rounded" aria-hidden="true">globe_location_pin</span></div>
+            <div class="benefit-item__text">
+              <h3>Especialización local</h3>
+              <p>Especialización absoluta en las normativas fiscales de Argentina.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 6. CÓMO MEJORA EL TRABAJO DIARIO (Timeline) -->
+<!-- ============================================ -->
+<section class="section workflow">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <span class="section-eyebrow">App móvil incluida</span>
+      <h2 class="section-title">Llevá la gestión de pedidos a todos lados</h2>
+      <p class="section-text section-text--center">
+        Univac Mobile ayuda a recopilar los pedidos de cada vendedor y se fusiona con el módulo de facturación. Menos errores, más velocidad.
+      </p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline__line"></div>
+
+      <div class="timeline__item reveal-up" data-delay="1">
+        <div class="timeline__marker"></div>
+        <div class="timeline__content">
+          <h3>Pedidos desde el celular</h3>
+          <p>Tus vendedores y viajantes cargan pedidos donde estén, integrados a facturación.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item reveal-up" data-delay="2">
+        <div class="timeline__marker"></div>
+        <div class="timeline__content">
+          <h3>Stock en tiempo real</h3>
+          <p>Cada pedido consulta existencias actualizadas para evitar vender lo que no hay.</p>
+        </div>
+      </div>
+
+      <div class="timeline__item reveal-up" data-delay="3">
+        <div class="timeline__marker"></div>
+        <div class="timeline__content">
+          <h3>Diseñada para Android & iOS</h3>
+          <p>Una app simple y amigable, pensada para usarse rápido en el día a día.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-badges reveal-up" data-delay="4">
+  </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 8. INTEGRACIONES -->
+<!-- ============================================ -->
+<section class="section integrations" id="integraciones">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <span class="section-eyebrow">Integraciones y compatibilidad</span>
+      <h2 class="section-title">Univac.ERP convive con el ecosistema digital moderno</h2>
+    </div>
+
+    <div class="cards-grid cards-grid--3">
+      <article class="card card--integration reveal-up" data-delay="1">
+        <div class="card__icon card__icon--blue"><span class="material-symbols-rounded" aria-hidden="true">shopping_cart</span></div>
+        <h3>E-commerce</h3>
+        <p>Integración nativa con Mercado Libre, Tienda Nube y WooCommerce.</p>
+      </article>
+
+      <article class="card card--integration reveal-up" data-delay="2">
+        <div class="card__icon card__icon--blue"><span class="material-symbols-rounded" aria-hidden="true">extension</span></div>
+        <h3>Plataforma nativa</h3>
+        <p>Sistema de e-commerce propio integrado, donde los pedidos ingresan automáticamente al sistema.</p>
+      </article>
+
+      <article class="card card--integration reveal-up" data-delay="3">
+        <div class="card__icon card__icon--blue"><span class="material-symbols-rounded" aria-hidden="true">upload_file</span></div>
+        <h3>Exportación de datos</h3>
+        <p>Exportá informes a Excel y PDF, con envío automático de comprobantes por correo electrónico y WhatsApp.</p>
+      </article>
+    </div>
+
+    <div class="integration-logos reveal-up" data-delay="4">
+      <span>Mercado Libre</span>
+      <span>Tienda Nube</span>
+      <span>WooCommerce</span>
+      <span>Excel</span>
+      <span>WhatsApp</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 11. TESTIMONIOS -->
+<!-- ============================================ -->
+<section class="section testimonials">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <span class="section-eyebrow">Testimonios</span>
+      <h2 class="section-title">Empresas que ya trabajan con Univac</h2>
+      <p class="section-text section-text--center">
+        Una solución basada en las mejores experiencias desarrolladas junto a nuestros clientes.
+      </p>
+    </div>
+
+    <!-- Testimonios de ejemplo: reemplazar por 3 a 5 clientes reales de Univac -->
+    <div class="testimonial-slider reveal-up" data-delay="1">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-slide">
+          <p>"Pasamos de tener todo en planillas a controlar ventas, stock y caja desde un solo lugar. Ganamos horas todas las semanas."</p>
+          <strong>Distribuidora regional — Comercio mayorista</strong>
+          <img class="testimonial-company__avatar" src="favicon_univac.png" alt="Logo de Distribuidora regional">
+        </div>
+        <div class="testimonial-slide">
+          <p>"Muy conformes con el servicio y sistema. Resaltamos su rápida atención y su capacidad para adaptarse a nuestros requerimientos."</p>
+          <strong>Calderas Fontanet - Ángel y Francisco Fontanet S.R.L.</strong>
+          <img class="testimonial-company__avatar" src="FONTANET.png" alt="Logo de Empresa de producción">
+        </div>
+        <div class="testimonial-slide">
+          <p>"Nuestra experiencia con Univac ha sido muy buena, es una herramienta facil de usar y nos simplifica muchas tareas del dia a dia, permitiendonos trabajar de forma mas agil y organizada."</p>
+          <strong>Tedi Showroom</strong>
+          <img class="testimonial-company__avatar" src="TEDI.png" alt="Logo de Casa de repuestos">
+        </div>
+        <div class="testimonial-slide">
+          <p>"Muy buena experiencia. Hace años que trabajamos con Univac y siempre respondió muy bien. Destacamos la atención, la predisposición y el acompañamiento."</p>
+          <strong>Spazio Showroom</strong>
+          <img class="testimonial-company__avatar" src="SPZ.png" alt="Logo de Casa de repuestos">
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- PREGUNTAS FRECUENTES -->
+<!-- ============================================ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <span class="section-eyebrow">Preguntas frecuentes</span>
+      <h2 class="section-title">Resolvemos tus dudas</h2>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item reveal-up" data-delay="1">
+        <summary>¿Dónde guarda Univac la información de mi empresa?</summary>
+          <p>Univac combina un sistema nativo de escritorio con una base de datos en la nube, copias de seguridad automáticas y cifrado de nivel bancario, para que tu información esté siempre protegida y disponible.</p>
+      </details>
+      <details class="faq-item reveal-up" data-delay="2">
+        <summary>¿Cuántos usuarios admite?</summary>
+        <p>La cantidad de usuarios depende del plan que elijas: podés empezar con pocos y sumar más a medida que tu equipo crece.</p>
+      </details>
+      <details class="faq-item reveal-up" data-delay="3">
+        <summary>¿Incluye soporte técnico el plan?</summary>
+          <p>Sí. Todos los planes incluyen soporte: por correo electrónico en el plan Comercio, prioritario en el plan Empresa y acompañamiento dedicado en el plan Integral.</p>
+      </details>
+      <details class="faq-item reveal-up" data-delay="4">
+        <summary>¿Cómo migro los datos de mi sistema anterior?</summary>
+        <p>Nuestro equipo te acompaña durante la implementación para migrar la información de tu sistema anterior sin perder continuidad en tu operación.</p>
+      </details>
+      <details class="faq-item reveal-up" data-delay="5">
+        <summary>¿Puedo configurar los reportes que quiero ver?</summary>
+        <p>Sí, el módulo de Estadísticas te permite generar reportes de ventas, utilidades, consumos y rendimiento por sector, con opciones de exportación.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 13. CONTACTO -->
+<!-- ============================================ -->
+<section class="section contact" id="contacto">
+  <div class="container contact__grid">
+    <div class="reveal-up">
+      <span class="section-eyebrow">Contacto</span>
+      <h2 class="section-title">Llevá tu gestión al siguiente nivel</h2>
+      <p class="section-text">
+        Agendá una demo gratis. Te mostramos Univac funcionando con un caso parecido al de tu empresa.
+      </p>
+
+      <ul class="contact-list">
+        <li>
+  <a href="https://wa.me/5493564367491" target="_blank" rel="noopener">
+    <svg class="icon-svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5.003L2 22l5.135-1.316A9.958 9.958 0 0 0 12.001 22C17.523 22 22 17.523 22 12S17.523 2 12.001 2zm0 18.03c-1.634 0-3.153-.481-4.432-1.307l-.318-.19-3.048.782.813-2.968-.207-.305A7.98 7.98 0 0 1 4.02 12c0-4.411 3.589-8 8-8 4.41 0 7.98 3.589 7.98 8 0 4.41-3.589 8-7.999 8z"/></svg>
+    <span>+54 9 3564 36-7491</span>
+  </a>
+</li>
+<li>
+  <a href="mailto:contacto@univac.com.ar">
+    <svg class="icon-svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    <span>contacto@univac.com.ar</span>
+  </a>
+</li>
+<li>
+  <a href="https://www.google.com/maps/search/?api=1&query=Fanny+Jacovsky+3539+X2400+San+Francisco+Cordoba+Argentina" target="_blank" rel="noopener">
+    <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2C7.86 2 4.5 5.36 4.5 9.5c0 5.25 6.42 11.64 6.7 11.91a1.13 1.13 0 0 0 1.6 0c.28-.27 6.7-6.66 6.7-11.91C19.5 5.36 16.14 2 12 2zm0 10.25a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5z"/></svg>
+    <span>Fanny Jacovsky 3539, X2400 San Francisco, Córdoba, Argentina</span>
+  </a>
+</li>
+<li>
+  <a href="https://instagram.com/Univac.isi" target="_blank" rel="noopener">
+    <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+    <span>@univac.isi</span>
+  </a>
+</li>
+      </ul>
+    </div>
+
+    <form class="contact-form glass-panel reveal-up" data-delay="1" id="contactForm">
+      <input type="hidden" name="access_key" value="772d9e74-0680-48a8-b3d7-c18a3d64ea43">
+      <input type="hidden" name="subject" value="Nuevo contacto desde Univac.ERP">
+      <input type="checkbox" name="botcheck" class="hidden-field" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="form-row">
+        <label>
+          <span>Nombre y Apellido</span>
+          <input type="text" name="nombre" required placeholder="Nombre y Apellido">
+        </label>
+        <label>
+          <span>Teléfono</span>
+          <input type="tel" name="telefono" placeholder="+54 9 ...">
+        </label>
+      </div>
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" required placeholder="tu@empresa.com">
+      </label>
+      <label>
+        <span>Mensaje</span>
+        <textarea name="mensaje" rows="4" placeholder="Contanos sobre tu negocio"></textarea>
+      </label>
+      <button type="submit" class="btn btn--primary btn--full">
+        <span>Solicitar demo</span>
+      </button>
+      <p class="form-success" id="formSuccess">¡Gracias! Te contactaremos a la brevedad.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================ -->
+<!-- FOOTER -->
+<!-- ============================================ -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="imagotipo_univac.png" alt="Univac.ERP" class="footer__logo">
+        <p>Gestión inteligente para empresas que crecen.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navegación del pie de página">
+        <a href="#inicio">Inicio</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#faq">Preguntas frecuentes</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; <span id="year"></span> Univac.ERP. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

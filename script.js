@@ -6,26 +6,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* Selector de tema: conserva la preferencia entre visitas. */
-  const themeToggle = document.getElementById('themeToggle');
-  const themeIcon = themeToggle?.querySelector('.theme-toggle__icon');
-
-  function setTheme(theme) {
-    const isLight = theme === 'light';
-    document.documentElement.dataset.theme = theme;
-    themeToggle?.setAttribute('aria-pressed', String(isLight));
-    themeToggle?.setAttribute('aria-label', isLight ? 'Activar modo oscuro' : 'Activar modo claro');
-    themeToggle?.setAttribute('title', isLight ? 'Activar modo oscuro' : 'Activar modo claro');
-    if (themeIcon) themeIcon.textContent = isLight ? 'dark_mode' : 'light_mode';
-  }
-
-  setTheme(localStorage.getItem('univac-theme') || 'dark');
-  themeToggle?.addEventListener('click', () => {
-    const nextTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
-    setTheme(nextTheme);
-    localStorage.setItem('univac-theme', nextTheme);
-  });
-
   /* -------------------------------------------------------------------
      1. AÑO DINÁMICO EN EL FOOTER
   ------------------------------------------------------------------- */

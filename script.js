@@ -310,3 +310,34 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+/* -------------------------------------------------------------------
+   7.5. FAQ: APERTURA ANIMADA
+------------------------------------------------------------------- */
+document.querySelectorAll('.faq-item').forEach(item => {
+  const summary = item.querySelector('summary');
+  const answer = item.querySelector('.faq-item__answer');
+
+  summary.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const isOpen = item.hasAttribute('open');
+
+    if (isOpen) {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        answer.style.maxHeight = '0px';
+        answer.style.opacity = '0';
+      });
+      setTimeout(() => item.removeAttribute('open'), 350);
+    } else {
+      item.setAttribute('open', '');
+      answer.style.maxHeight = '0px';
+      answer.style.opacity = '0';
+      requestAnimationFrame(() => {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        answer.style.opacity = '1';
+      });
+    }
+  });
+});

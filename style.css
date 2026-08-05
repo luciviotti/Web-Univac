@@ -873,27 +873,6 @@ input, textarea{ font-family: inherit; }
 }
 
 /* =====================================================================
-   INTEGRACIONES
-   ===================================================================== */
-.integration-logos{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap: 34px;
-  margin-top: 54px;
-  font-family: var(--font-display);
-  font-weight: 600;
-  color: var(--text-faint);
-  font-size: 0.95rem;
-}
-.integration-logos span{ transition: color .3s; }
-.integration-logos span:hover{ color: var(--cyan); }
-
-
-
-
-
-/* =====================================================================
    TESTIMONIOS
    ===================================================================== */
 .testimonial-slider{ max-width: 720px; margin: 0 auto; text-align:center; }

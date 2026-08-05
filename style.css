@@ -258,7 +258,7 @@ input, textarea{ font-family: inherit; }
   gap: 24px;
 }
 .navbar__brand{ display:flex; align-items:center; }
-.navbar__logo{ height: 38px; width:auto; transition: transform .3s var(--ease); }
+.navbar__logo{ height: 60px; width:auto; transition: transform .3s var(--ease); }
 .navbar__brand:hover .navbar__logo{ transform: scale(1.05); }
 
 .navbar__links{
@@ -584,6 +584,7 @@ input, textarea{ font-family: inherit; }
 }
 .what-is__grid--single .section-text{
   max-width: none;
+  margin: 0px 80px;
 }
 .what-is__stats{
   display:grid;
